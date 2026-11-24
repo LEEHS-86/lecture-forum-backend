@@ -45,5 +45,3 @@ model User {
   gender      GenderType
   role        RoleType   @default(USER)
 }
-
-
