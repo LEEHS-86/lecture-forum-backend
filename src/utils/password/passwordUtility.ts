@@ -12,6 +12,8 @@ const hashPassword = async (password: string) => {
 // 암호화한 값을 겸증하는 함수 (로그인할 때)
 const verifyPassword = async (plainPassword: string, hashedPassword: string) => {
     // bcrypt.compare(배교할 원래 텍스트, 비교할 암호화 텍스트) : 비동기 함수, 두 개의 값을 비교해서 boolean 리턴함
+    // 1. 들어온 비교할 텍스트를 암호화 하고
+    // 2. 1번의 결과와 hashedPassword를 비교해서 true / false를 냄
     return await bcrypt.compare(plainPassword, hashedPassword);
 };
 

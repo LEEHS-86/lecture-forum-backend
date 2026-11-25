@@ -2,7 +2,7 @@ import { type Request, type Response} from "express";
 import { User } from "../generated/prisma/client.ts";
 import userService from "../services/userService.ts";
 import { UserCreateInput } from "../generated/prisma/models/User.ts";
-import passwordUtility from "../utils/passwordUtility.ts";
+import passwordUtility from "../utils/password/passwordUtility.ts";
 
 // userController 라는 "user"는
 // 경로상에서 /user로 시작되는 요청이 들어오게 되는 곳이라서 userController임
